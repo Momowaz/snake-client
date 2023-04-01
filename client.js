@@ -7,12 +7,13 @@ const connect = () => {
 });
 
 //Print a message to the screen when the connection is successfully established.
-conn.on('connect', () => {
-    console.log('Successfully connected to game server');
-});
+// conn.on('connect', () => {
+//     console.log('Successfully connected to game server');
+// });
 
 //Send a name MHB to the server
 conn.on('connect', () => {
+    // console.log('Successfully connected to game server');
     conn.write('Name: MHB');
 });
 

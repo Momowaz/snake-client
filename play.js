@@ -3,6 +3,7 @@ const { connect } = require('./client');
 const { setupInput } = require('./input');
 
 
-console.log('Connecting...');
-connect();
-setupInput();
+console.log('Connecting to server...');
+const conn = connect();
+console.log('Connection established');
+setupInput(conn);
