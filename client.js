@@ -11,9 +11,14 @@ conn.on('connect', () => {
     console.log('Successfully connected to game server');
 });
 
+//Send a name MHB to the server
 conn.on('connect', () => {
     conn.write('Name: MHB');
 });
+
+// conn.on('connect', () => {
+//     conn.write('Move: up');
+// });
 
 // Recieve data from server
 conn.on('data', (data) => {
