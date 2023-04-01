@@ -7,26 +7,6 @@ const connect = () => {
     port: PORT,
 });
 
-//Print a message to the screen when the connection is successfully established.
-// conn.on('connect', () => {
-//     console.log('Successfully connected to game server');
-// });
-
-//Send a name MHB to the server
-conn.on('connect', () => {
-    // console.log('Successfully connected to game server');
-    conn.write('Name: MHB');
-});
-
-// conn.on('connect', () => {
-//     conn.write('Move: up');
-// });
-
-// Recieve data from server
-// conn.on('data', (data) => {
-//     console.log(data);
-// })
-
 conn.setEncoding('utf8');
 return conn;
 }
