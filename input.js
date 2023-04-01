@@ -8,13 +8,15 @@ const setupInput = function (conn) {
     stdin.setEncoding('utf8');
     stdin.resume();
 
-    stdin.on('data', handleUserInput);
+    stdin.on('data', (key) => {
+        handleUserInput(key);
+    });
 
     return stdin;
 };
 
-const handleUserInput = function () {
-    process.stdin.on('data', (key) => {
+const handleUserInput = function (key) {
+        connection.write('Say: Holaa!');
         if (key === 'w') {
             connection.write('Move: up');
         }
@@ -30,7 +32,6 @@ const handleUserInput = function () {
         if (key === '\u0003') {
             process.exit();
         }
-    })
 };
 
 module.exports = { setupInput };
